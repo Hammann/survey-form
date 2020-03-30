@@ -1,7 +1,84 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <h1 id="title">Tell Me About Music</h1>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: sans-serif;
+      padding-left: 20%;
+      padding-right: 20%;
+    }
+  label {
+      font-size: 18px
+      display: block;
+    }
+  input {
+      display: block;
+    }
+  h1 {
+      color: #CC0000;
+    }
+
+.controls {
+  display: flex;
+}
+
+.radio {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hours {
+  padding-top: 12px;
+}
+}
+  </style>
 </head>
+
 <body>
+  <h1 id="title">Music Listening Habits</h1>
+  <p id="description">Tell us about your relationship with music.</p>
+  <form id="survey-form">
+    <label id="name-label">Name:</label>
+     <input type="text" name="name" id="name" required placeholder="Name"><br>
+
+      <label id="email-label">Email:</label>
+     <input type="email" name="email" id="email" required placeholder="Best Email"><br>
+     <div class="controls">
+      What gender describes you best?<br>
+         <input type="radio" id="male" name="gender" value="male">
+         <label for="male">Male</label><br>
+         <input type="radio" id="female" name="gender" value="female">
+         <label for="female">Female</label><br>
+         <input type="radio" id="other" name="gender" value="other">
+         <label for="other">Other</label><br>
+      </div><br>
+    <label id="number-label" class="hours">How many hours do you spend listening to music each day?</label>
+     <input type="number" name="number" id="number" min = "0" max="10" required placeholder="<3"><br>
+
+     <label for="genre">What genre do you listen to most?</label>
+      <select id="dropdown">
+         <option value="pop">Pop</option>
+         <option value="rock">Rock</option>
+         <option value="rap">Rap</option>
+         <option value="indie">Indie</option>
+         <option value="country">Country</option>
+         <option value="classical">Classical</option>
+      </select><br><br>
+    Where do you listen to music?<br><br>
+        <label for="home">Home</label>
+        <input type="checkbox" id="home" name="home" value="home">
+        <label for="work">Work</label>
+        <input type="checkbox" id="work" name="work" value="work">
+        <label for="outside">Outside</label>
+        <input type="checkbox" id="outside" name="outside" value="outside"><br>
+
+        <label for="addditional comments">Additional Comments:</label><br>
+        <textarea id="additional comments" placeholder="Addtional Comments"></textarea><br>
+    <input type="submit" id="submit">
+  </form>
+  <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
